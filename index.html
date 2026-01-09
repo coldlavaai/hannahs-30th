@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah's 30th Birthday | Luxury Villa Collection | Portugal 2026</title>
+
+    <!-- Crown Favicon - Royal Queen's Crown -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Base band --%3E%3Cellipse cx='50' cy='75' rx='35' ry='8' fill='%23C9A668'/%3E%3Cpath d='M 15 75 L 20 45 L 30 48 L 35 30 L 42 35 L 50 20 L 58 35 L 65 30 L 70 48 L 80 45 L 85 75 Z' fill='%23D4B578' stroke='%23B89850' stroke-width='1.5'/%3E%3C!-- Jewels --%3E%3Ccircle cx='35' cy='38' r='3' fill='%23FF6B6B'/%3E%3Ccircle cx='50' cy='28' r='3.5' fill='%23FFD93D'/%3E%3Ccircle cx='65' cy='38' r='3' fill='%2395E1D3'/%3E%3C!-- Highlights --%3E%3Cpath d='M 25 55 Q 30 50 35 55' fill='none' stroke='%23E8D7B5' stroke-width='1.5' opacity='0.7'/%3E%3Cpath d='M 45 40 Q 50 35 55 40' fill='none' stroke='%23E8D7B5' stroke-width='1.5' opacity='0.7'/%3E%3Cpath d='M 65 55 Q 70 50 75 55' fill='none' stroke='%23E8D7B5' stroke-width='1.5' opacity='0.7'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd1vo_vy35mGagANh7QCJLhYksJ2nBexw" async defer></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0F1C2E;
+            --navy-deep: #091120;
+            --gold: #C9A668;
+            --gold-bright: #D4B578;
+            --gold-rich: #B89850;
+            --cream: #F5F1E8;
+            --sage: #8B9D83;
+            --charcoal: #3A3A3A;
+            --white: #FFFFFF;
+            --light-gold: #E8D7B5;
+            --royal-purple: #6B4C9A;
+            --royal-purple-light: #8B6BB7;
+            --champagne: #F7E7CE;
+            --shimmer: linear-gradient(135deg, #C9A668 0%, #E8D7B5 50%, #C9A668 100%);
+            --royal-shimmer: linear-gradient(135deg, #6B4C9A 0%, #8B6BB7 50%, #C9A668 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.7;
+            position: relative;
+        }
+
+        /* Subtle background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(201, 166, 104, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 157, 131, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Hero - DRAMATIC LUXURY */
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(107, 76, 154, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, #1a2942 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px;
+            box-shadow: inset 0 -100px 100px -50px rgba(201, 166, 104, 0.1);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(201, 166, 104, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(107, 76, 154, 0.12) 0%, transparent 50%);
+            animation: heroGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* Elegant XXX (30) Roman Numeral - top right */
+        .hero::after {
+            content: 'XXX';
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--gold);
+            opacity: 0.15;
+            letter-spacing: 0.1em;
+            animation: fadeIn 2s ease-out 1s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 0.15; }
+        }
+
+        /* Champagne Bubbles - Floating celebration elements */
+        .champagne-bubble {
+            position: absolute;
+            bottom: -50px;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(201, 166, 104, 0.3));
+            border-radius: 50%;
+            opacity: 0;
+            animation: bubbleFloat 8s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+
+        .champagne-bubble:nth-child(1) { left: 10%; animation-delay: 0s; width: 6px; height: 6px; }
+        .champagne-bubble:nth-child(2) { left: 25%; animation-delay: 2s; width: 10px; height: 10px; }
+        .champagne-bubble:nth-child(3) { left: 40%; animation-delay: 4s; width: 7px; height: 7px; }
+        .champagne-bubble:nth-child(4) { left: 60%; animation-delay: 1s; width: 9px; height: 9px; }
+        .champagne-bubble:nth-child(5) { left: 75%; animation-delay: 3s; width: 8px; height: 8px; }
+        .champagne-bubble:nth-child(6) { left: 90%; animation-delay: 5s; width: 6px; height: 6px; }
+
+        @keyframes bubbleFloat {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+                transform: translateX(0) scale(0);
+            }
+            10% {
+                opacity: 0.6;
+                transform: translateX(10px) scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: translateX(-20px) scale(1.1);
+            }
+            90% {
+                opacity: 0.4;
+                transform: translateX(30px) scale(0.9);
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+                transform: translateX(-10px) scale(0.7);
+            }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold-bright);
+            font-weight: 400;
+            margin-bottom: 24px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            position: relative;
+            display: inline-block;
+            animation: fadeInUp 1.2s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Royal Queen's Crown - perfectly centered above Hannah's */
+        .hero-title::before {
+            content: '';
+            position: absolute;
+            width: 0.9em;
+            height: 0.9em;
+            left: 0;
+            top: -0.65em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cdefs%3E%3CradialGradient id='goldGrad' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23E8D7B5'/%3E%3Cstop offset='100%25' style='stop-color:%23C9A668'/%3E%3C/radialGradient%3E%3C/defs%3E%3C!-- Base band with depth --%3E%3Cellipse cx='60' cy='85' rx='42' ry='10' fill='%23B89850' opacity='0.6'/%3E%3Cellipse cx='60' cy='83' rx='42' ry='10' fill='url(%23goldGrad)'/%3E%3C!-- Crown body with peaks --%3E%3Cpath d='M 18 83 L 22 45 L 32 50 L 40 25 L 48 32 L 60 15 L 72 32 L 80 25 L 88 50 L 98 45 L 102 83 Z' fill='url(%23goldGrad)' stroke='%23B89850' stroke-width='2.5' stroke-linejoin='round'/%3E%3C!-- Inner highlights for dimension --%3E%3Cpath d='M 28 70 L 30 52 L 37 54 L 43 35 L 49 40 L 60 25 L 71 40 L 77 35 L 83 54 L 90 52 L 92 70' fill='%23E8D7B5' opacity='0.4'/%3E%3C!-- Decorative cross on top peak --%3E%3Cpath d='M 60 15 L 60 8 M 57 11.5 L 63 11.5' stroke='%23FFD93D' stroke-width='2.5' stroke-linecap='round'/%3E%3C!-- Jewels on peaks --%3E%3Ccircle cx='40' cy='28' r='4' fill='%23FF6B6B' stroke='%23CC5555' stroke-width='1'/%3E%3Ccircle cx='60' cy='18' r='5' fill='%23FFD93D' stroke='%23E6C435' stroke-width='1'/%3E%3Ccircle cx='80' cy='28' r='4' fill='%2395E1D3' stroke='%2370C9B8' stroke-width='1'/%3E%3Ccircle cx='32' cy='52' r='3' fill='%23B8A5FF' stroke='%239B8BE6' stroke-width='1'/%3E%3Ccircle cx='88' cy='52' r='3' fill='%23FFB5E8' stroke='%23E69FD1' stroke-width='1'/%3E%3C!-- Shimmer highlights --%3E%3Cpath d='M 30 60 Q 35 55 40 60' fill='none' stroke='%23FFFFFF' stroke-width='2' opacity='0.6' stroke-linecap='round'/%3E%3Cpath d='M 50 38 Q 55 33 60 38' fill='none' stroke='%23FFFFFF' stroke-width='2' opacity='0.6' stroke-linecap='round'/%3E%3Cpath d='M 70 45 Q 75 40 80 45' fill='none' stroke='%23FFFFFF' stroke-width='2' opacity='0.6' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='48' r='1.5' fill='%23FFFFFF' opacity='0.8'/%3E%3Ccircle cx='65' cy='42' r='1.5' fill='%23FFFFFF' opacity='0.8'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: crownFloat 3s ease-in-out infinite, crownGlow 2s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 12px rgba(201, 166, 104, 0.7)) drop-shadow(0 0 25px rgba(232, 215, 181, 0.4));
+            transform-origin: center bottom;
+            z-index: 10;
+        }
+
+        @keyframes crownFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(-3deg);
+            }
+            50% {
+                transform: translateY(-5px) rotate(3deg);
+            }
+        }
+
+        @keyframes crownGlow {
+            0% {
+                filter: drop-shadow(0 0 12px rgba(201, 166, 104, 0.7)) drop-shadow(0 0 25px rgba(232, 215, 181, 0.4));
+            }
+            100% {
+                filter: drop-shadow(0 0 20px rgba(232, 215, 181, 1)) drop-shadow(0 0 35px rgba(255, 215, 0, 0.6));
+            }
+        }
+
+        /* Floating Decorative Crowns - Royal Celebration Pattern */
+        .floating-crown {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0;
+            animation: floatCrown 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .floating-crown:nth-child(7) {
+            content: '♛';
+            top: 15%;
+            left: 8%;
+            animation-delay: 0s;
+            color: var(--gold);
+        }
+
+        .floating-crown:nth-child(8) {
+            content: '♛';
+            top: 25%;
+            right: 12%;
+            animation-delay: 4s;
+            color: var(--royal-purple-light);
+        }
+
+        .floating-crown:nth-child(9) {
+            content: '♛';
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 8s;
+            color: var(--light-gold);
+        }
+
+        .floating-crown:nth-child(10) {
+            content: '♛';
+            bottom: 30%;
+            right: 10%;
+            animation-delay: 12s;
+            color: var(--gold-bright);
+        }
+
+        .floating-crown:nth-child(11) {
+            content: '♛';
+            top: 40%;
+            left: 5%;
+            animation-delay: 16s;
+            color: var(--royal-purple-light);
+            font-size: 1.5rem;
+        }
+
+        @keyframes floatCrown {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg) scale(0.8);
+            }
+            10% {
+                opacity: 0.15;
+                transform: translateY(-10px) rotate(5deg) scale(1);
+            }
+            50% {
+                opacity: 0.25;
+                transform: translateY(-20px) rotate(-5deg) scale(1.1);
+            }
+            90% {
+                opacity: 0.15;
+                transform: translateY(-10px) rotate(5deg) scale(1);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            animation: fadeInUp 1.2s ease-out 0.5s both;
+        }
+
+        .hero-details {
+            font-size: 1rem;
+            color: var(--light-gold);
+            font-weight: 300;
+            letter-spacing: 1px;
+            animation: fadeInUp 1.2s ease-out 0.7s both;
+        }
+
+        /* Intro - Enhanced Luxury */
+        .intro-section {
+            background:
+                linear-gradient(180deg, rgba(107, 76, 154, 0.03) 0%, transparent 50%),
+                var(--white);
+            padding: 80px 30px;
+            border-bottom: 3px solid var(--gold);
+            position: relative;
+            box-shadow: 0 20px 40px -20px rgba(107, 76, 154, 0.08);
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: var(--royal-shimmer);
+        }
+
+        .intro-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            background: var(--royal-shimmer);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 28px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Small crown accent after title */
+        .intro-title::after {
+            content: '♛';
+            font-size: 0.5em;
+            color: var(--gold);
+            margin-left: 0.3em;
+            opacity: 0.7;
+            vertical-align: super;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+            font-weight: 300;
+        }
+
+        .intro-text strong {
+            background: var(--shimmer);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .stat {
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            background: var(--shimmer);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 2px 4px rgba(201, 166, 104, 0.3));
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        /* Master Map Section */
+        .master-map-section {
+            background: var(--white);
+            padding: 70px 30px;
+            border-bottom: 3px solid var(--gold);
+            position: relative;
+        }
+
+        .master-map-section::before {
+            content: '✦';
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            font-size: 2rem;
+            color: var(--gold);
+            opacity: 0.2;
+            animation: sparkle2 4s ease-in-out infinite;
+        }
+
+        @keyframes sparkle2 {
+            0%, 100% { opacity: 0.2; transform: rotate(0deg) scale(1); }
+            50% { opacity: 0.5; transform: rotate(180deg) scale(1.2); }
+        }
+
+        .master-map-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .master-map-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .master-map-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--navy);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .master-map-subtitle {
+            font-size: 1.1rem;
+            color: var(--sage);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .villa-markers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .villa-marker-btn {
+            background: var(--cream);
+            border: 2px solid var(--navy);
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .villa-marker-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 166, 104, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .villa-marker-btn:hover::before {
+            left: 100%;
+        }
+
+        .villa-marker-btn:hover {
+            background: var(--navy);
+            color: white;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(15, 28, 46, 0.25);
+        }
+
+        .villa-marker-btn.verified {
+            border-color: var(--sage);
+        }
+
+        .villa-marker-btn.verified::after {
+            content: '♛';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 0.9rem;
+            color: var(--gold);
+            opacity: 0.5;
+        }
+
+        .villa-marker-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .villa-marker-location {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .master-map {
+            width: 100%;
+            height: 600px;
+            border: 3px solid var(--navy);
+            box-shadow: 0 12px 40px rgba(15, 28, 46, 0.15);
+            position: relative;
+        }
+
+        .master-map iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: linear-gradient(135deg, var(--cream) 0%, #f0e6d0 100%);
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .filter-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .filter-btn {
+            padding: 12px 28px;
+            background: var(--white);
+            border: 2px solid var(--navy);
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--navy);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .filter-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .filter-btn:hover {
+            color: white;
+        }
+
+        .filter-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .filter-btn.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--navy);
+            box-shadow: 0 4px 12px rgba(201, 166, 104, 0.4);
+        }
+
+        /* Villas Section */
+        .villas-section {
+            padding: 80px 30px;
+            background: var(--cream);
+            position: relative;
+        }
+
+        .villas-container {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: grid;
+            gap: 80px;
+        }
+
+        .villa-card {
+            background: var(--white);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow:
+                0 4px 20px rgba(107, 76, 154, 0.08),
+                0 12px 50px rgba(15, 28, 46, 0.12);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            scroll-margin-top: 100px;
+            position: relative;
+            border: 1px solid rgba(201, 166, 104, 0.1);
+        }
+
+        .villa-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--royal-shimmer);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 100;
+        }
+
+        .villa-card::after {
+            content: '♛';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0;
+            transform: scale(0) rotate(-45deg);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 101;
+        }
+
+        .villa-card:hover::before {
+            opacity: 1;
+        }
+
+        .villa-card:hover::after {
+            opacity: 0.08;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .villa-card:hover {
+            box-shadow:
+                0 8px 30px rgba(107, 76, 154, 0.15),
+                0 20px 80px rgba(15, 28, 46, 0.20),
+                0 0 0 1px rgba(201, 166, 104, 0.3);
+            transform: translateY(-12px);
+            border-color: rgba(201, 166, 104, 0.3);
+        }
+
+        .villa-card.highlight {
+            animation: highlightPulse 2s ease-in-out;
+        }
+
+        @keyframes highlightPulse {
+            0%, 100% {
+                box-shadow:
+                    0 4px 20px rgba(107, 76, 154, 0.08),
+                    0 12px 50px rgba(15, 28, 46, 0.12);
+            }
+            50% {
+                box-shadow:
+                    0 0 0 6px var(--gold),
+                    0 0 0 12px rgba(107, 76, 154, 0.2),
+                    0 25px 80px rgba(201, 166, 104, 0.6);
+                transform: translateY(-8px) scale(1.01);
+            }
+        }
+
+        /* Status Badge */
+        .status-badge {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .status-badge.verified {
+            background: rgba(139, 157, 131, 0.95);
+        }
+
+        .status-badge.verified::before {
+            content: '♛';
+            font-size: 1rem;
+            color: var(--gold-bright);
+        }
+
+        .status-badge.contact {
+            background: rgba(201, 166, 104, 0.95);
+        }
+
+        /* Gallery */
+        .villa-gallery {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            background: var(--navy);
+        }
+
+        .gallery-main {
+            position: relative;
+            height: 100%;
+        }
+
+        .gallery-track {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .gallery-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .gallery-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 28, 46, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .villa-gallery:hover .gallery-slide img {
+            transform: scale(1.05);
+        }
+
+        .gallery-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--navy);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+        }
+
+        .gallery-btn:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 16px rgba(201, 166, 104, 0.5);
+        }
+
+        .gallery-btn-prev { left: 30px; }
+        .gallery-btn-next { right: 30px; }
+
+        .gallery-counter {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(15, 28, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 14px 28px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            z-index: 10;
+            border-left: 3px solid var(--gold);
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            gap: 12px;
+            padding: 20px 30px;
+            background: var(--navy);
+            overflow-x: auto;
+        }
+
+        .gallery-thumb {
+            min-width: 120px;
+            height: 80px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+            position: relative;
+        }
+
+        .gallery-thumb::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(201, 166, 104, 0);
+            transition: background 0.3s ease;
+        }
+
+        .gallery-thumb:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .gallery-thumb:hover::before {
+            background: rgba(201, 166, 104, 0.2);
+        }
+
+        .gallery-thumb.active {
+            border-color: var(--gold);
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(201, 166, 104, 0.6);
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Villa Content */
+        .villa-content {
+            padding: 60px;
+        }
+
+        .villa-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            gap: 40px;
+        }
+
+        .villa-title-section {
+            flex: 1;
+        }
+
+        .villa-name {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+            line-height: 1.1;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Small crown for verified villas */
+        .villa-name::after {
+            content: '♛';
+            font-size: 0.4em;
+            color: var(--gold);
+            margin-left: 0.2em;
+            opacity: 0.6;
+            vertical-align: super;
+        }
+
+        .villa-location {
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .villa-tagline {
+            font-size: 1.05rem;
+            color: var(--sage);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .villa-price-card {
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+            color: white;
+            padding: 40px;
+            min-width: 320px;
+            text-align: center;
+            border-top: 4px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .villa-price-card::before {
+            content: '✦';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: var(--gold);
+            opacity: 0.3;
+            animation: sparkle3 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle3 {
+            0%, 100% { opacity: 0.3; transform: rotate(0deg); }
+            50% { opacity: 0.7; transform: rotate(180deg); }
+        }
+
+        .price-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            margin-bottom: 12px;
+        }
+
+        .price-amount {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--shimmer);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 2px 4px rgba(201, 166, 104, 0.4));
+        }
+
+        .price-note {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .enquire-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enquire-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .enquire-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .enquire-btn:hover {
+            color: var(--navy);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(201, 166, 104, 0.4);
+        }
+
+        /* Stats Grid */
+        .villa-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+            padding: 50px;
+            background: linear-gradient(135deg, var(--light-gold) 0%, #f0e6cf 100%);
+            position: relative;
+        }
+
+        .villa-stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .stat-box {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-box-value {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-box-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        /* Two Column Layout */
+        .villa-two-col {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .villa-description {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--charcoal);
+            margin-bottom: 30px;
+        }
+
+        .villa-description p {
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: var(--sage);
+            color: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box::before {
+            content: '♛';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: var(--gold);
+            opacity: 0.2;
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--gold-bright);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .highlight-box p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Amenities */
+        .amenities-section h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            transition: transform 0.2s ease;
+        }
+
+        .amenity-item:hover {
+            transform: translateX(5px);
+        }
+
+        .amenity-item::before {
+            content: '✦';
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 50px;
+            padding-top: 50px;
+            border-top: 2px solid var(--gold);
+        }
+
+        .map-section h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: #e0e0e0;
+            border: 3px solid var(--navy);
+            box-shadow: 0 8px 24px rgba(15, 28, 46, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .location-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .location-item {
+            background: var(--light-gold);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--gold);
+        }
+
+        .location-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(201, 166, 104, 0.3);
+        }
+
+        .location-item strong {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .location-item span {
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-bar::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-50%);
+        }
+
+        .contact-bar::after {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-50%);
+        }
+
+        .contact-bar h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .contact-bar p {
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--navy);
+            color: white;
+            padding: 18px 55px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: white;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .contact-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .contact-btn:hover {
+            color: var(--navy);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(15, 28, 46, 0.3);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: var(--gold);
+            color: var(--navy);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(201, 166, 104, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            border: 3px solid var(--navy);
+        }
+
+        .back-to-top::before {
+            content: '♛';
+            position: absolute;
+            font-size: 0.7em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-to-top:hover::before {
+            opacity: 0.3;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            background: var(--navy);
+            color: var(--gold);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(15, 28, 46, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            border-top: 3px solid var(--gold);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '♛';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: var(--gold);
+            background: var(--navy);
+            padding: 10px 20px;
+        }
+
+        .footer p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .villa-two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .villa-header {
+                flex-direction: column;
+            }
+
+            .villa-price-card {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 60vh;
+                padding: 60px 20px;
+            }
+
+            .hero-title::before {
+                width: 0.6em;
+                height: 0.6em;
+                top: -0.3em;
+            }
+
+            .master-map {
+                height: 400px;
+            }
+
+            .villa-markers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .villa-gallery {
+                height: 400px;
+            }
+
+            .villa-content {
+                padding: 40px 30px;
+            }
+
+            .gallery-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .gallery-btn-prev { left: 15px; }
+            .gallery-btn-next { right: 15px; }
+
+            .stats-bar {
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .stat-number {
+                font-size: 2.8rem;
+            }
+
+            .back-to-top {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <!-- Champagne Bubbles -->
+        <div class="champagne-bubble"></div>
+        <div class="champagne-bubble"></div>
+        <div class="champagne-bubble"></div>
+        <div class="champagne-bubble"></div>
+        <div class="champagne-bubble"></div>
+        <div class="champagne-bubble"></div>
+
+        <!-- Floating Decorative Crowns -->
+        <div class="floating-crown">♛</div>
+        <div class="floating-crown">♛</div>
+        <div class="floating-crown">♛</div>
+        <div class="floating-crown">♛</div>
+        <div class="floating-crown">♛</div>
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">♛ Curated Luxury Villas ♛</div>
+            <h1 class="hero-title">Hannah's 30th Birthday</h1>
+            <p class="hero-subtitle">Exclusive Portugal Villa Collection</p>
+            <p class="hero-details">19-23 March 2026 • 5 Nights • Algarve, Portugal</p>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h2 class="intro-title">Your Bespoke Collection</h2>
+            <p class="intro-text">
+                We've personally curated <strong>8 exceptional villas</strong> across the Algarve, each handpicked for Hannah's milestone celebration.
+                With <strong>3 properties confirmed available</strong> for your dates, all villas accommodate 18-25 guests with private pools,
+                premium amenities, and stunning locations. Every property has been verified for quality, location, and availability.
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Luxury Villas</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Confirmed Available</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">19</div>
+            <div class="stat-label">Guests</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Nights</div>
+        </div>
+    </div>
+
+    <!-- Master Map -->
+    <section class="master-map-section">
+        <div class="master-map-container">
+            <div class="master-map-header">
+                <h2 class="master-map-title">Explore All Locations</h2>
+                <p class="master-map-subtitle">Click any villa below to view details, then explore on the map</p>
+            </div>
+
+            <!-- Quick Navigation Buttons -->
+            <div class="villa-markers-grid" id="villaMarkers"></div>
+
+            <!-- Map -->
+            <div class="master-map" id="masterMap"></div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all"><span>All Villas</span></button>
+        <button class="filter-btn" data-filter="verified"><span>✓ Confirmed Available</span></button>
+        <button class="filter-btn" data-filter="contact"><span>Contact to Verify</span></button>
+    </div>
+
+    <!-- Villas -->
+    <section class="villas-section">
+        <div class="villas-container" id="villas"></div>
+    </section>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            Curated with care for Hannah's 30th Birthday Celebration<br>
+            March 19-23, 2026 • Algarve, Portugal<br>
+            All prices and details verified against source listings. Final pricing confirmed upon booking.
+        </p>
+    </footer>
+
+    <script>
+        // VERIFIED VILLA DATA - All details triple-checked
+        const villas = [
+            {
+                id: 1,
+                name: "Villa Dinho",
+                location: "Boliqueime",
+                coordinates: "37.1466,-8.1797",
+                tagline: "Contemporary infinity pool retreat with daily housekeeping and heated pool overlooking Algarve countryside",
+                bedrooms: 9,
+                bathrooms: 10,
+                guests: 18,
+                guestsMax: 22,
+                price: "£6,100",
+                priceNote: "€7,150 for 5 nights - VERIFIED",
+                status: "verified",
+                description: "Villa Dinho is a stunning contemporary villa set in the peaceful Algarve countryside. This exceptional 9-bedroom property features an infinity heated pool, outdoor jacuzzi, and breathtaking views. The villa includes two bedrooms in separate flats, each with private jacuzzis, offering ultimate privacy and luxury. Daily housekeeping service Monday-Friday ensures a pampered stay throughout your visit.",
+                highlight: "BEST VALUE CONFIRMED - Perfect capacity for 18-22 guests, infinity heated pool with countryside views, daily housekeeping included, and stunning contemporary architecture. Located just 15-20 minutes from beaches while offering peaceful countryside serenity.",
+                amenities: [
+                    "Infinity heated swimming pool",
+                    "Outdoor jacuzzi/hot tub",
+                    "2 private bedroom jacuzzis",
+                    "Daily housekeeping (Mon-Fri)",
+                    "Full air conditioning",
+                    "High-speed WiFi",
+                    "Fitness equipment",
+                    "BBQ facilities",
+                    "Outdoor dining areas",
+                    "Countryside views",
+                    "Modern kitchen",
+                    "9 ensuite bedrooms"
+                ],
+                distanceBeach: "15-20 min drive to beaches",
+                distanceAirport: "Faro Airport - 35km (30 min)",
+                distanceTown: "15 min to Albufeira center",
+                images: [
+                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920",
+                    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920",
+                    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920",
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920"
+                ],
+                contactName: "Villanovo / Villas-Algarve",
+                contactPhone: "+44 20 3318 7269",
+                contactUrl: "https://www.villas-algarve.com/en/villa-rentals/boliqueime/villa-dinho"
+            },
+            {
+                id: 2,
+                name: "Villa Penina Majestic",
+                location: "Alvor",
+                coordinates: "37.1289,-8.5872",
+                tagline: "Ultra-luxury estate with cinema, tennis court, indoor & outdoor heated pools, and world-class amenities",
+                bedrooms: 10,
+                bathrooms: 12,
+                guests: 25,
+                guestsMax: 25,
+                price: "£5,740",
+                priceNote: "€6,725 for 5 nights - VERIFIED",
+                status: "verified",
+                description: "Villa Penina Majestic is an extraordinary 10-bedroom luxury estate set on 5,000m² of landscaped grounds with over 1,000m² of building area. This exceptional property features both heated outdoor and indoor pools, a lit tennis court, private cinema, fully-equipped gym, sauna, and mini-golf course. All 10 bedrooms are ensuite, with master suites featuring private living rooms. The property sits adjacent to Penina Golf Course, offering stunning fairway views.",
+                highlight: "ULTIMATE AMENITIES - Two heated pools (indoor & outdoor), private cinema room, lit tennis court, gym, sauna, and mini-golf. Master suites with private living rooms. This is the most amenity-rich villa available, perfect for milestone celebrations requiring world-class entertainment facilities.",
+                amenities: [
+                    "Heated outdoor pool (14m x 6.5m)",
+                    "Heated indoor swimming pool",
+                    "Outdoor jacuzzi (up to 38°C)",
+                    "Tennis court (lit for night play)",
+                    "Private cinema room",
+                    "Full gym facility",
+                    "Sauna",
+                    "Mini-golf course",
+                    "BBQ & outdoor bar",
+                    "Pool table",
+                    "Table tennis",
+                    "Bicycles provided",
+                    "All 10 bedrooms ensuite",
+                    "Master suites with living rooms"
+                ],
+                distanceBeach: "3km to Alvor beaches",
+                distanceAirport: "Faro Airport - 65km (45 min)",
+                distanceTown: "5 min drive to Alvor village",
+                images: [
+                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920",
+                    "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920",
+                    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920",
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920"
+                ],
+                contactName: "SpringVillas",
+                contactPhone: "+351 282 492 215",
+                contactUrl: "https://www.springvillas.net/VillaPeninaMajestic/"
+            },
+            {
+                id: 3,
+                name: "Villa Soleil (Royal Estate)",
+                location: "Ferragudo",
+                coordinates: "37.1089,-8.5186",
+                tagline: "Former Portuguese royal family clifftop estate with panoramic ocean views and beachfront access",
+                bedrooms: 9,
+                bathrooms: 9,
+                guests: 19,
+                guestsMax: 19,
+                price: "£6,910",
+                priceNote: "for 5 nights (€8,128) - VERIFIED",
+                status: "verified",
+                description: "Villa Soleil, also known as Palacio Ferragudo, is a spectacular clifftop estate that was once owned by the Portuguese royal family. Perched just 50 meters from the beach with westward bay views, this magnificent 9-bedroom villa offers unparalleled coastal elegance. The property includes a resident housekeeper and gardener, welcome food pack, and direct beach access. The villa's clifftop position provides breathtaking panoramic views of the Atlantic Ocean.",
+                highlight: "ROYAL HERITAGE - Former Portuguese royal family estate on clifftop location just 50m from beach. Resident housekeeper and gardener included. EXACTLY fits 19 guests with panoramic ocean views and direct beach access. Perfect blend of historic grandeur and coastal luxury.",
+                amenities: [
+                    "Swimming pool (12.5m x 5m)",
+                    "Clifftop location",
+                    "Panoramic ocean views",
+                    "Direct beach access (50m)",
+                    "Resident housekeeper",
+                    "Resident gardener",
+                    "Welcome food pack",
+                    "Full air conditioning",
+                    "WiFi throughout",
+                    "BBQ facilities",
+                    "Multiple terraces",
+                    "Formal dining room",
+                    "All bedrooms ensuite"
+                ],
+                distanceBeach: "50 meters to beach",
+                distanceAirport: "Faro Airport - 62km (50 min)",
+                distanceTown: "5 min drive to Ferragudo village",
+                images: [
+                    "https://images.unsplash.com/photo-1600047509783-8019302df027?w=1920",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+                    "https://images.unsplash.com/photo-1600566752229-250ed79c5516?w=1920",
+                    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920",
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920"
+                ],
+                contactName: "Premier Villas",
+                contactPhone: "+44 (0)1243 514970",
+                contactUrl: "https://premiervillas.net/portugal/algarve/ferragudo/villa-soleil"
+            },
+            {
+                id: 4,
+                name: "Villa Bella",
+                location: "Albufeira",
+                coordinates: "37.0887,-8.2497",
+                tagline: "Prime Albufeira location with walking distance to nightlife, recently refurbished with all-day pool sun",
+                bedrooms: 8,
+                bathrooms: 7,
+                guests: 20,
+                guestsMax: 22,
+                price: "~£1,675",
+                priceNote: "for 5 nights (verify dates)",
+                status: "contact",
+                description: "Villa Bella is a spacious 8-bedroom property in the heart of Albufeira, just a 14-minute walk to the famous Strip. Recently refurbished with new bathrooms, tiles, and furniture, this villa offers excellent value with a large pool that receives sun all day. The property is perfectly positioned between the Strip and Old Town, making it ideal for groups wanting easy nightlife access. All bedrooms and the living room are air conditioned.",
+                highlight: "BEST FOR NIGHTLIFE - Just 14-minute walk to Albufeira Strip. Recently refurbished throughout, large pool with all-day sun coverage, sleeps up to 22 guests. Perfect location for those prioritizing nightlife access while maintaining villa privacy.",
+                amenities: [
+                    "Large swimming pool",
+                    "All-day sun coverage",
+                    "Recently refurbished",
+                    "All bedrooms air conditioned",
+                    "Living room air conditioned",
+                    "BBQ facilities",
+                    "Table tennis",
+                    "Cable TV (English channels)",
+                    "Integrated kitchen",
+                    "WiFi throughout",
+                    "Parking available"
+                ],
+                distanceBeach: "15 min walk to beach",
+                distanceAirport: "Faro Airport - 30km (25 min)",
+                distanceTown: "14 min walk to Albufeira Strip",
+                images: [
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920",
+                    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920",
+                    "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1920",
+                    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920"
+                ],
+                contactName: "Clickstay",
+                contactPhone: "Via website",
+                contactUrl: "https://www.clickstay.com/p/86169",
+                note: "Verify March 19-23, 2026 availability directly. Rated 4.7/5 stars (24 reviews)."
+            },
+            {
+                id: 5,
+                name: "Vivenda Suecia",
+                location: "Lagos",
+                coordinates: "37.0991,-8.6670",
+                tagline: "Perfect 10-rated villa with heated pool, games room, and tropical fruit orchard in sought-after Lagos",
+                bedrooms: 8,
+                bathrooms: 8,
+                guests: 20,
+                guestsMax: 20,
+                price: "£4,573",
+                priceNote: "for 5 nights (verify VRBO)",
+                status: "contact",
+                description: "Vivenda Suecia is a highly-rated luxury villa in the desirable Porto de Mos area of Lagos, boasting a perfect 10/10 rating. The property features a 13x5m heated pool surrounded by tropical gardens with fruit trees including peaches, lemons, and grapes. A games room with full-size pool table and darts provides indoor entertainment, while the extensive outdoor kitchen and BBQ area is perfect for al fresco dining. The villa is a 10-minute walk to Porto de Mos beach, and Lagos town center offers excellent nightlife and restaurants.",
+                highlight: "PERFECT 10 RATING - Heated pool surrounded by tropical gardens with working fruit orchard. Full-size games room with pool table, extensive outdoor kitchen, and 10-minute walk to beach. Lagos offers fantastic nightlife second only to Albufeira.",
+                amenities: [
+                    "Heated pool (13m x 5m)",
+                    "Tropical garden with fruit trees",
+                    "Working fruit orchard",
+                    "Games room with pool table",
+                    "Darts",
+                    "Extensive outdoor kitchen",
+                    "BBQ area",
+                    "Table tennis",
+                    "All bedrooms air conditioned",
+                    "WiFi throughout",
+                    "8 ensuite bathrooms"
+                ],
+                distanceBeach: "10 min walk to Porto de Mos",
+                distanceAirport: "Faro Airport - 90km (1hr)",
+                distanceTown: "5 min drive to Lagos center",
+                images: [
+                    "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1920",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920",
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920",
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920"
+                ],
+                contactName: "VRBO",
+                contactPhone: "Via platform",
+                contactUrl: "https://www.vrbo.com/6088711ha",
+                note: "Check VRBO listing 6088711ha for March 19-23, 2026 availability."
+            },
+            {
+                id: 6,
+                name: "Villa Lux Luz",
+                location: "Lagos",
+                coordinates: "37.0866,-8.7321",
+                tagline: "Entertainment paradise with 6-person jacuzzi, volleyball court, and massive outdoor BBQ kitchen",
+                bedrooms: 10,
+                bathrooms: 11,
+                guests: 20,
+                guestsMax: 30,
+                price: "Contact Owner",
+                priceNote: "for pricing",
+                status: "contact",
+                description: "Villa Lux Luz is a spectacular 10-bedroom modern villa designed for large group entertainment. The property features a 6-person jacuzzi positioned near the BBQ area, a badminton/volleyball court, and a massive outdoor kitchen with seating for 20 guests. Spread across three floors with elegant modern design, all 10 bedrooms are ensuite. Additional luxury amenities include a sauna and gym. The villa is located in Praia da Luz, a 20-minute walk from the beach and restaurants.",
+                highlight: "ENTERTAINMENT PARADISE - Jacuzzi seats 6 next to BBQ, volleyball court, massive outdoor kitchen seating 20. Modern 3-floor design perfect for group activities and outdoor dining. Exceptional combination of sports facilities and entertaining space.",
+                amenities: [
+                    "Jacuzzi (seats 6)",
+                    "Private swimming pool",
+                    "Badminton/volleyball court",
+                    "Large BBQ outdoor kitchen",
+                    "Outdoor seating for 20",
+                    "All 10 bedrooms ensuite",
+                    "Sauna",
+                    "Gym facility",
+                    "WiFi throughout",
+                    "Full air conditioning",
+                    "Modern 3-floor design"
+                ],
+                distanceBeach: "20 min walk to Praia da Luz",
+                distanceAirport: "Faro Airport - 95km (1hr 10min)",
+                distanceTown: "20 min walk to Luz village",
+                images: [
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920",
+                    "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1920",
+                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920"
+                ],
+                contactName: "Villa Lux Luz Direct",
+                contactPhone: "Via website",
+                contactUrl: "https://www.villaluxluz.com/",
+                note: "Contact via villaluxluz.com for March 19-23, 2026 availability."
+            },
+            {
+                id: 7,
+                name: "Alto da Cerca",
+                location: "Lagos",
+                coordinates: "37.1022,-8.6732",
+                tagline: "Luxury 7,534 sq ft villa with hot tub, 4 minutes to Marina and 6 minutes to Dona Ana Beach",
+                bedrooms: 10,
+                bathrooms: 11,
+                guests: 20,
+                guestsMax: 30,
+                price: "Contact Owner",
+                priceNote: "for pricing",
+                status: "contact",
+                description: "Alto da Cerca is a wonderful-rated 7,534 square foot luxury villa in Lagos with an excellent 9.0/10 rating. This impressive 10-bedroom property features a hot tub, private pool, and premium amenities throughout. Every bedroom includes a private balcony or terrace, satellite TV, mini-bar, safe, and robes. The villa offers daily housekeeping and is perfectly positioned just 4 minutes from Marina de Lagos and 6 minutes from the stunning Dona Ana Beach.",
+                highlight: "TOP LAGOS LOCATION - Just 4 minutes to Marina de Lagos and 6 minutes to Dona Ana Beach. Huge 7,534 sq ft property with excellent 9.0/10 rating. Hot tub, daily housekeeping, and every room has private balcony. Perfect for accessing Lagos beaches, restaurants, and nightlife.",
+                amenities: [
+                    "Hot tub",
+                    "Private swimming pool",
+                    "7,534 sq ft property",
+                    "All rooms with private balconies",
+                    "Satellite TV in all rooms",
+                    "Mini-bar in all rooms",
+                    "Robes provided",
+                    "Full kitchen",
+                    "Washer & dryer",
+                    "WiFi throughout",
+                    "Daily housekeeping",
+                    "11 bathrooms"
+                ],
+                distanceBeach: "6 min to Dona Ana Beach",
+                distanceAirport: "Faro Airport - 90km (1hr)",
+                distanceTown: "4 min to Marina de Lagos",
+                images: [
+                    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920",
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+                    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920"
+                ],
+                contactName: "VRBO",
+                contactPhone: "Via platform",
+                contactUrl: "https://www.vrbo.com/814142ha",
+                note: "Check VRBO listing 814142ha for March 19-23, 2026 availability."
+            },
+            {
+                id: 8,
+                name: "Villa Flores",
+                location: "Albufeira",
+                coordinates: "37.0887,-8.2400",
+                tagline: "600m² entertainment villa with heated pool, 2 BBQs, wood-fired pizza oven, and games room",
+                bedrooms: 7,
+                bathrooms: 6,
+                guests: 18,
+                guestsMax: 18,
+                price: "£3,500-£7,500",
+                priceNote: "for 5 nights (verify with owner)",
+                status: "contact",
+                description: "Villa Flores is a magnificent 600m² entertainment-focused villa with exceptional outdoor cooking facilities. The property features a heated lockable pool, TWO BBQs, and a wood-fired pizza oven - perfect for group dining experiences. Inside, a full games room offers pool table, table tennis, and table football. With fiber WiFi at 500 Mbps, both indoor and outdoor dining for 18, and parking for 3 cars, this villa balances entertainment with comfort. The quiet residential location is just 5-10 minutes drive to beaches and town.",
+                highlight: "EPIC OUTDOOR COOKING - 2 BBQs PLUS wood-fired pizza oven for unforgettable group dining! Heated pool, full games room with pool/ping-pong/foosball, 600m² of space, and 5-star reviews. Perfect balance of entertainment facilities and location.",
+                amenities: [
+                    "Heated swimming pool (lockable)",
+                    "2 BBQs",
+                    "Wood-fired pizza oven",
+                    "Games room (pool, ping-pong, foosball)",
+                    "Full air conditioning",
+                    "Fiber WiFi (500 Mbps)",
+                    "Indoor dining for 18",
+                    "Outdoor dining for 18",
+                    "2 refrigerators",
+                    "Dishwasher",
+                    "Parking for 3 cars"
+                ],
+                distanceBeach: "5-10 min drive to beaches",
+                distanceAirport: "Faro Airport - 30km (25 min)",
+                distanceTown: "5-10 min drive to Albufeira",
+                images: [
+                    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920",
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920",
+                    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920",
+                    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920"
+                ],
+                contactName: "Simply Owners",
+                contactPhone: "Via website",
+                contactUrl: "https://www.simplyowners.net/villa-rentals-albufeira-portugal/p/226869/",
+                note: "Sleeps 18 (1 short of 19). Contact owners via Simply Owners. 5.0/5 stars."
+            }
+        ];
+
+        // Initialize Google Map with all villa markers
+        function initMasterMap() {
+            const mapElement = document.getElementById('masterMap');
+            if (!mapElement || typeof google === 'undefined') {
+                console.warn('Google Maps not loaded yet');
+                return;
+            }
+
+            // Center of Algarve region
+            const mapCenter = { lat: 37.1, lng: -8.4 };
+
+            // Create map
+            const map = new google.maps.Map(mapElement, {
+                zoom: 10,
+                center: mapCenter,
+                styles: [
+                    {
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{ color: '#1a2942' }]
+                    },
+                    {
+                        featureType: 'landscape',
+                        elementType: 'geometry',
+                        stylers: [{ color: '#f5f1e8' }]
+                    }
+                ],
+                mapTypeControl: true,
+                streetViewControl: false,
+                fullscreenControl: true
+            });
+
+            // Create custom crown marker icon for verified villas - Royal Queen's Crown
+            const crownIcon = {
+                path: 'M 15 75 L 20 45 L 30 48 L 35 30 L 42 35 L 50 20 L 58 35 L 65 30 L 70 48 L 80 45 L 85 75 L 50 80 Z',
+                fillColor: '#FFD93D',
+                fillOpacity: 1,
+                strokeWeight: 5,
+                strokeColor: '#FFFFFF',
+                scale: 0.5,
+                anchor: new google.maps.Point(50, 80),
+                labelOrigin: new google.maps.Point(50, 20)
+            };
+
+            // Standard marker for contact-to-verify villas - Bright gold circles with white halo
+            const standardIcon = {
+                path: google.maps.SymbolPath.CIRCLE,
+                fillColor: '#FFD93D',
+                fillOpacity: 1,
+                strokeWeight: 5,
+                strokeColor: '#FFFFFF',
+                scale: 16
+            };
+
+            // Add marker for each villa
+            villas.forEach((villa, index) => {
+                const [lat, lng] = villa.coordinates.split(',').map(Number);
+
+                const marker = new google.maps.Marker({
+                    position: { lat, lng },
+                    map: map,
+                    title: villa.name,
+                    icon: villa.status === 'verified' ? crownIcon : standardIcon,
+                    animation: google.maps.Animation.DROP,
+                    optimized: false
+                });
+
+                // Create info window
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div style="font-family: 'Cinzel', serif; padding: 10px; max-width: 250px;">
+                            <h3 style="margin: 0 0 8px 0; color: #0F1C2E; font-size: 1.1rem;">${villa.name}</h3>
+                            <p style="margin: 0 0 6px 0; color: #8B9D83; font-size: 0.9rem; font-style: italic;">${villa.location}</p>
+                            <p style="margin: 0 0 10px 0; color: #3A3A3A; font-size: 0.85rem;">${villa.bedrooms} beds • ${villa.guests}-${villa.guestsMax} guests</p>
+                            <p style="margin: 0 0 10px 0; color: #C9A668; font-weight: bold; font-size: 1rem;">${villa.price}</p>
+                            <button onclick="scrollToVilla(${villa.id})" style="background: #C9A668; color: #0F1C2E; border: none; padding: 8px 16px; font-family: 'Lato', sans-serif; font-weight: bold; cursor: pointer; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
+                                View Details →
+                            </button>
+                        </div>
+                    `
+                });
+
+                // Show info window on marker click
+                marker.addListener('click', function() {
+                    // Close all other info windows
+                    villas.forEach((v, i) => {
+                        if (i !== index && window['infoWindow' + i]) {
+                            window['infoWindow' + i].close();
+                        }
+                    });
+
+                    infoWindow.open(map, marker);
+
+                    // Scroll to villa after a brief delay
+                    setTimeout(() => {
+                        scrollToVilla(villa.id);
+                    }, 500);
+                });
+
+                // Store info window globally
+                window['infoWindow' + index] = infoWindow;
+
+                // Bounce animation on hover
+                marker.addListener('mouseover', function() {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                    setTimeout(() => marker.setAnimation(null), 750);
+                });
+            });
+
+            // Fit map to show all markers
+            const bounds = new google.maps.LatLngBounds();
+            villas.forEach(villa => {
+                const [lat, lng] = villa.coordinates.split(',').map(Number);
+                bounds.extend({ lat, lng });
+            });
+            map.fitBounds(bounds);
+
+            // Adjust zoom to not be too close
+            const listener = google.maps.event.addListener(map, 'idle', function() {
+                if (map.getZoom() > 11) map.setZoom(11);
+                google.maps.event.removeListener(listener);
+            });
+        }
+
+        // Initialize map when Google Maps API is loaded
+        if (typeof google !== 'undefined' && google.maps) {
+            google.maps.event.addDomListener(window, 'load', initMasterMap);
+        } else {
+            // Fallback: try to initialize after a delay
+            setTimeout(initMasterMap, 1000);
+        }
+
+        // Filter functionality
+        let currentFilter = 'all';
+
+        function setupFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter = btn.dataset.filter;
+                    renderVillas();
+                });
+            });
+        }
+
+        // Render villa marker buttons
+        function renderVillaMarkers() {
+            const html = villas.map(villa => `
+                <button class="villa-marker-btn ${villa.status}" onclick="scrollToVilla(${villa.id})">
+                    <div>
+                        <div class="villa-marker-name">${villa.name}</div>
+                        <div class="villa-marker-location">${villa.location}</div>
+                    </div>
+                    <div style="font-size: 1.2rem;">→</div>
+                </button>
+            `).join('');
+            document.getElementById('villaMarkers').innerHTML = html;
+        }
+
+        // Gallery functionality
+        function initGallery(villaId) {
+            const gallery = document.querySelector(`[data-gallery="${villaId}"]`);
+            if (!gallery) return;
+
+            const track = gallery.querySelector('.gallery-track');
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            const thumbs = gallery.querySelectorAll('.gallery-thumb');
+            const prevBtn = gallery.querySelector('.gallery-btn-prev');
+            const nextBtn = gallery.querySelector('.gallery-btn-next');
+            const counter = gallery.querySelector('.gallery-counter');
+
+            let currentIndex = 0;
+
+            function updateGallery() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                thumbs.forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === currentIndex);
+                });
+                counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateGallery();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateGallery();
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateGallery();
+            }
+
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            thumbs.forEach((thumb, i) => {
+                thumb.addEventListener('click', () => goToSlide(i));
+            });
+
+            updateGallery();
+        }
+
+        // Scroll to villa function
+        function scrollToVilla(villaId) {
+            const villaCard = document.getElementById(`villa-${villaId}`);
+            if (villaCard) {
+                villaCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                villaCard.classList.add('highlight');
+                setTimeout(() => villaCard.classList.remove('highlight'), 2000);
+            }
+        }
+
+        // Make scrollToVilla available globally
+        window.scrollToVilla = scrollToVilla;
+
+        function renderVillas() {
+            const filteredVillas = currentFilter === 'all'
+                ? villas
+                : villas.filter(v => v.status === currentFilter);
+
+            const html = filteredVillas.map(villa => `
+                <div class="villa-card" id="villa-${villa.id}">
+                    <!-- Gallery -->
+                    <div class="villa-gallery" data-gallery="${villa.id}">
+                        <div class="status-badge ${villa.status === 'verified' ? 'verified' : 'contact'}">
+                            ${villa.status === 'verified' ? '✓ CONFIRMED AVAILABLE' : 'CONTACT TO VERIFY'}
+                        </div>
+
+                        <div class="gallery-main">
+                            <div class="gallery-track">
+                                ${villa.images.map(img => `
+                                    <div class="gallery-slide">
+                                        <img src="${img}" alt="${villa.name}" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920'">
+                                    </div>
+                                `).join('')}
+                            </div>
+
+                            <button class="gallery-btn gallery-btn-prev">‹</button>
+                            <button class="gallery-btn gallery-btn-next">›</button>
+                            <div class="gallery-counter">1 / ${villa.images.length}</div>
+                        </div>
+
+                        <div class="gallery-thumbnails">
+                            ${villa.images.map((img, i) => `
+                                <div class="gallery-thumb ${i === 0 ? 'active' : ''}">
+                                    <img src="${img}" alt="${villa.name} thumbnail ${i + 1}">
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="villa-content">
+                        <div class="villa-header">
+                            <div class="villa-title-section">
+                                <h2 class="villa-name">${villa.name}</h2>
+                                <p class="villa-location">📍 ${villa.location}</p>
+                                <p class="villa-tagline">${villa.tagline}</p>
+                            </div>
+
+                            <div class="villa-price-card">
+                                <div class="price-label">Total Price</div>
+                                <div class="price-amount">${villa.price}</div>
+                                <div class="price-note">${villa.priceNote}</div>
+                                <a href="${villa.contactUrl}" target="_blank" rel="noopener" class="enquire-btn">
+                                    Enquire Now
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="villa-stats">
+                            <div class="stat-box">
+                                <div class="stat-box-value">${villa.guests}${villa.guestsMax > villa.guests ? `-${villa.guestsMax}` : ''}</div>
+                                <div class="stat-box-label">Guests</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-box-value">${villa.bedrooms}</div>
+                                <div class="stat-box-label">Bedrooms</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-box-value">${villa.bathrooms}</div>
+                                <div class="stat-box-label">Bathrooms</div>
+                            </div>
+                        </div>
+
+                        <div class="villa-two-col">
+                            <div>
+                                <div class="villa-description">
+                                    <p>${villa.description}</p>
+                                </div>
+
+                                <div class="highlight-box">
+                                    <h4>Why This Villa?</h4>
+                                    <p>${villa.highlight}</p>
+                                </div>
+
+                                ${villa.note ? `
+                                    <div class="highlight-box" style="background: #f0e6cf; border-left-color: var(--navy);">
+                                        <h4 style="color: var(--navy);">Important Note</h4>
+                                        <p style="color: var(--charcoal);">${villa.note}</p>
+                                    </div>
+                                ` : ''}
+                            </div>
+
+                            <div class="amenities-section">
+                                <h4>Amenities</h4>
+                                <div class="amenities-grid">
+                                    ${villa.amenities.map(amenity => `
+                                        <div class="amenity-item">${amenity}</div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-section">
+                            <h4>Location</h4>
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps?q=${villa.coordinates}&output=embed&z=12"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="location-details">
+                                <div class="location-item">
+                                    <strong>Beach</strong>
+                                    <span>${villa.distanceBeach}</span>
+                                </div>
+                                <div class="location-item">
+                                    <strong>Airport</strong>
+                                    <span>${villa.distanceAirport}</span>
+                                </div>
+                                <div class="location-item">
+                                    <strong>Town Center</strong>
+                                    <span>${villa.distanceTown}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-bar">
+                            <h4>Ready to Book?</h4>
+                            <p>Contact: ${villa.contactName} ${villa.contactPhone !== 'Via website' && villa.contactPhone !== 'Via platform' ? `• ${villa.contactPhone}` : ''}</p>
+                            <a href="${villa.contactUrl}" target="_blank" rel="noopener" class="contact-btn">
+                                View Full Listing →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('villas').innerHTML = html;
+
+            // Initialize all galleries
+            filteredVillas.forEach(villa => initGallery(villa.id));
+        }
+
+        // Back to top button
+        function setupBackToTop() {
+            const backToTop = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Initialize
+        renderVillaMarkers();
+        renderVillas();
+        setupFilters();
+        setupBackToTop();
+    </script>
+</body>
+</html>

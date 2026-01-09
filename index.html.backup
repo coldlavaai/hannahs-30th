@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah's 30th Birthday - Villa Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-dark: #0A1628;
+            --navy: #1C2B3F;
+            --cream: #F5F1E8;
+            --sand: #E8E3D6;
+            --gold: #B8966F;
+            --gold-light: #D4AF7A;
+            --white: #FFFFFF;
+            --green: #2D6A4F;
+            --red: #BC4B51;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--cream);
+            color: var(--navy-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .site-hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(184, 150, 111, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(184, 150, 111, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .user-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 12px 28px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 40px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--navy-dark);
+            font-size: 14px;
+        }
+
+        .user-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title strong {
+            font-weight: 700;
+            display: block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .hero-details {
+            font-size: 1rem;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            opacity: 0.5;
+        }
+
+        /* Leaderboard */
+        .leaderboard-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .leaderboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--navy-dark);
+        }
+
+        .leaderboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .leaderboard-item {
+            background: var(--cream);
+            padding: 24px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .leaderboard-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .leaderboard-rank {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            min-width: 60px;
+        }
+
+        .leaderboard-info {
+            flex: 1;
+        }
+
+        .leaderboard-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--navy-dark);
+            margin-bottom: 4px;
+        }
+
+        .leaderboard-location {
+            font-size: 0.9rem;
+            color: var(--navy);
+            opacity: 0.7;
+        }
+
+        .leaderboard-votes {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        /* Villas Section */
+        .villas-section {
+            background: var(--cream);
+        }
+
+        .villa-article {
+            margin-bottom: 0;
+            background: var(--white);
+            border-bottom: 20px solid var(--cream);
+        }
+
+        .villa-hero {
+            position: relative;
+            height: 85vh;
+            max-height: 800px;
+            overflow: hidden;
+        }
+
+        .villa-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+
+        .villa-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 22, 40, 0.9) 0%, transparent 100%);
+            padding: 60px;
+            color: var(--white);
+        }
+
+        .villa-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .villa-hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .villa-hero-location {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .villa-hero-stats {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .villa-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .villa-stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .villa-stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .villa-rating-badge {
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--navy-dark);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image Gallery Grid */
+        .villa-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+            height: 500px;
+        }
+
+        .gallery-image-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-image {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Villa Content */
+        .villa-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 60px;
+        }
+
+        .villa-content-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        .villa-main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--navy-dark);
+        }
+
+        .villa-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--navy);
+            margin-bottom: 32px;
+        }
+
+        .villa-why-box {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            padding: 32px;
+            border-radius: 12px;
+            color: var(--navy-dark);
+            margin-bottom: 32px;
+        }
+
+        .villa-why-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .villa-why-box p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Sidebar */
+        .villa-sidebar {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+        }
+
+        .price-card {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .price-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .price-total {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .amenities-card {
+            background: var(--cream);
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .amenities-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--navy-dark);
+        }
+
+        .amenities-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .amenities-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .amenities-list li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        .location-card {
+            background: var(--sand);
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .location-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--navy-dark);
+        }
+
+        .location-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .location-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .location-icon {
+            font-size: 1.2rem;
+            min-width: 24px;
+        }
+
+        /* Voting Section */
+        .villa-voting-section {
+            background: var(--cream);
+            padding: 60px;
+            border-radius: 12px;
+            margin-top: 60px;
+        }
+
+        .voting-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .voting-header h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .vote-score {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--navy-dark);
+            margin-bottom: 20px;
+        }
+
+        .vote-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .vote-btn {
+            flex: 1;
+            max-width: 200px;
+            padding: 20px 32px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .vote-btn-up {
+            background: linear-gradient(135deg, var(--green) 0%, #2D8659 100%);
+            color: var(--white);
+        }
+
+        .vote-btn-up:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.4);
+        }
+
+        .vote-btn-down {
+            background: linear-gradient(135deg, var(--red) 0%, #A33F44 100%);
+            color: var(--white);
+        }
+
+        .vote-btn-down:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(188, 75, 81, 0.4);
+        }
+
+        .vote-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .voters-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .voters-group h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            font-weight: 900;
+        }
+
+        .voters-group.up h4 {
+            color: var(--green);
+        }
+
+        .voters-group.down h4 {
+            color: var(--red);
+        }
+
+        .voters-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .voter-chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .voter-chip.up {
+            background: rgba(45, 106, 79, 0.15);
+            color: var(--green);
+            border: 2px solid rgba(45, 106, 79, 0.3);
+        }
+
+        .voter-chip.down {
+            background: rgba(188, 75, 81, 0.15);
+            color: var(--red);
+            border: 2px solid rgba(188, 75, 81, 0.3);
+        }
+
+        .book-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            color: var(--white);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .book-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(10, 22, 40, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        @keyframes slowZoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .villa-content-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .villa-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .villa-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                height: 400px;
+            }
+
+            .gallery-image-large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .villa-hero-overlay {
+                padding: 40px 20px;
+            }
+
+            .villa-content {
+                padding: 60px 20px;
+            }
+
+            .villa-voting-section {
+                padding: 40px 20px;
+            }
+
+            .voters-section {
+                grid-template-columns: 1fr;
+            }
+
+            .vote-buttons {
+                flex-direction: column;
+                max-width: 100%;
+            }
+
+            .vote-btn {
+                max-width: 100%;
+            }
+
+            .villa-gallery-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .gallery-image {
+                height: 250px;
+            }
+
+            .gallery-image-large {
+                grid-column: span 1;
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Hero -->
+    <section class="site-hero">
+        <div class="hero-content">
+            <div class="user-badge" id="user-badge">
+                <div class="user-avatar" id="user-avatar">?</div>
+                <span class="user-name" id="user-name">Welcome</span>
+            </div>
+            <h1 class="hero-title">
+                <span>Hannah's 30th</span>
+                <strong>Villa Collection</strong>
+            </h1>
+            <p class="hero-subtitle">Algarve, Portugal & Malta</p>
+            <p class="hero-details">19-24 March 2026 • 15 People • 5 Nights</p>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard-section">
+        <div class="leaderboard-container">
+            <h2 class="section-title">Top Villas</h2>
+            <div class="leaderboard-grid" id="leaderboard-grid"></div>
+        </div>
+    </section>
+
+    <!-- Villas -->
+    <section class="villas-section" id="villas-section"></section>
+
+    <script>
+        // User management
+        const USERS = [
+            { id: 'oliver', name: 'Oliver', color: '#B8966F' },
+            { id: 'hannah', name: 'Hannah', color: '#D4AF7A' },
+            { id: 'person3', name: 'Person 3', color: '#2D6A4F' },
+            { id: 'person4', name: 'Person 4', color: '#BC4B51' },
+            { id: 'person5', name: 'Person 5', color: '#1C2B3F' },
+            { id: 'person6', name: 'Person 6', color: '#8b5cf6' },
+            { id: 'person7', name: 'Person 7', color: '#ec4899' },
+            { id: 'person8', name: 'Person 8', color: '#14b8a6' },
+            { id: 'person9', name: 'Person 9', color: '#f59e0b' },
+            { id: 'person10', name: 'Person 10', color: '#6366f1' },
+            { id: 'person11', name: 'Person 11', color: '#06b6d4' },
+            { id: 'person12', name: 'Person 12', color: '#84cc16' },
+            { id: 'person13', name: 'Person 13', color: '#f97316' },
+            { id: 'person14', name: 'Person 14', color: '#a855f7' },
+            { id: 'person15', name: 'Person 15', color: '#22c55e' }
+        ];
+
+        function getCurrentUser() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const userId = urlParams.get('user');
+            return USERS.find(u => u.id === userId) || null;
+        }
+
+        const currentUser = getCurrentUser();
+
+        // Villa data - ALL FROM VERIFIED PLATFORMS (VRBO ONLY - 100% SAFE)
+        const villas = [
+            {
+                id: 1,
+                name: "Villa Collum",
+                location: "Areias de São João, Albufeira",
+                area: "Albufeira",
+                bedrooms: 6,
+                bathrooms: 5,
+                guests: 14,
+                pricePerNight: "£293",
+                priceTotal: "~£1,465 for 5 nights",
+                rating: 8.8,
+                description: "Top-rated 6-bedroom villa with private pool just 3 minutes walk from The Strip! Perfect location for nightlife while being in a quiet residential area. Features table tennis, BBQ area, and a large pool area for relaxing. Excellent reviews highlight the perfect location and great amenities.",
+                amenities: [
+                    "Private pool",
+                    "Table tennis",
+                    "BBQ facilities",
+                    "Full A/C throughout",
+                    "Free WiFi",
+                    "Pet-friendly",
+                    "Washer included",
+                    "Full kitchen",
+                    "Parking available"
+                ],
+                distances: {
+                    beach: "3-min walk to The Strip",
+                    nightlife: "Walking distance to bars/clubs",
+                    airport: "35 mins to Faro Airport",
+                    oldtown: "3-min drive to Old Town Square"
+                },
+                why: "BEST LOCATION! 3-minute walk to the Strip means you're right in the action but on a quiet street. Top-rated with 51 reviews. Table tennis and pool for entertainment. Perfect balance of party access and peaceful sleep.",
+                images: [
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920",
+                    "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1920",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920",
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920"
+                ],
+                url: "https://www.vrbo.com/1009374ha"
+            },
+            {
+                id: 5,
+                name: "Villa Torre",
+                location: "Olhos de Água, Albufeira",
+                area: "Albufeira",
+                bedrooms: 7,
+                bathrooms: 5,
+                guests: 18,
+                pricePerNight: "£540-£970",
+                priceTotal: "~£2,700-£4,850 for 5 nights",
+                rating: 4.5,
+                description: "Large spacious 7-bedroom luxury villa with sea views. Fully refurbished with new bathrooms and furniture throughout. Located on elevated plot with two sun deck areas. Near beautiful beaches and about 25 minutes walk to the Strip. All bedrooms and living room air conditioned.",
+                amenities: [
+                    "Large swimming pool",
+                    "Sea views",
+                    "Two sun decks",
+                    "All bedrooms A/C",
+                    "Recently refurbished",
+                    "Elevated plot",
+                    "New furniture",
+                    "BBQ facilities",
+                    "WiFi"
+                ],
+                distances: {
+                    beach: "10-min walk to Olhos de Água beach",
+                    nightlife: "25-min walk to Strip",
+                    airport: "35 mins to Faro Airport",
+                    supermarket: "5-min walk"
+                },
+                why: "Sea views from an elevated plot. 10 minutes to beautiful Olhos de Água beach. Recently refurbished so all new and fresh. Two sun decks means you can follow the sun all day. Good middle ground between beach access and nightlife.",
+                images: [
+                    "https://images.unsplash.com/photo-1600047509783-8019302df027?w=1920",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+                    "https://images.unsplash.com/photo-1600566752229-250ed79c5516?w=1920",
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920"
+                ],
+                url: "https://www.vrbo.com/423477ha"
+            },
+            {
+                id: 6,
+                name: "Villa d'Oura",
+                location: "Praia d'Oura, Albufeira",
+                area: "Albufeira",
+                bedrooms: 6,
+                bathrooms: 6,
+                guests: 16,
+                pricePerNight: "£834",
+                priceTotal: "~£4,170 for 5 nights (March)",
+                rating: 4.8,
+                description: "Sensational luxury villa on cliff-top with fabulous ocean views. Heated Jacuzzi overlooking panoramic sunsets! Tranquil setting yet only a few minutes walk from the beach, bars and restaurants of lively Praia d'Oura and Montechoro Strip. Includes gym and maid service.",
+                amenities: [
+                    "Heated Jacuzzi with ocean views",
+                    "Swimming pool (10m x 6m)",
+                    "Gym (free weights, running machine, bike)",
+                    "Cliff-top location",
+                    "Full A/C all bedrooms",
+                    "Maid service & linen change 2x weekly",
+                    "Charcoal BBQ",
+                    "Cable TV & DVD",
+                    "Optional pool heating"
+                ],
+                distances: {
+                    beach: "Few mins walk to Praia d'Oura",
+                    nightlife: "Walking distance to Montechoro Strip",
+                    airport: "35 mins to Faro",
+                    supermarket: "Nearby"
+                },
+                why: "HEATED JACUZZI with OCEAN VIEWS for sunset drinks! Cliff-top location is stunning. Walking distance to the beach AND the Strip. Gym included. Maid service twice weekly. Feels luxurious but still in budget!",
+                images: [
+                    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920",
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920",
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920"
+                ],
+                url: "https://www.sun-hat-villas.com/algarve/albufeira-area/villa-doura-1796"
+            },
+            {
+                id: 7,
+                name: "Villa Teresa",
+                location: "Oura, Albufeira",
+                area: "Albufeira",
+                bedrooms: 6,
+                bathrooms: 6,
+                guests: 16,
+                pricePerNight: "£714-£1,086",
+                priceTotal: "~£3,570-£5,430 for 5 nights",
+                rating: 9.4,
+                description: "Beautiful spacious 6-bedroom villa beside the Strip with private pool and large garden. Rare to find a villa with gardens in central Albufeira. Located at the end of a quiet cobbled road, just 3-4 minutes walk from the main Strip. Perfect for groups wanting easy nightlife access.",
+                amenities: [
+                    "Private pool",
+                    "Large garden (rare for center)",
+                    "All 6 ensuites",
+                    "A/C throughout",
+                    "BBQ area",
+                    "Quiet location",
+                    "Pet-friendly",
+                    "Parking",
+                    "WiFi"
+                ],
+                distances: {
+                    beach: "6-min walk to Oura Beach",
+                    nightlife: "3-4 min walk to the Strip!",
+                    airport: "35 mins to Faro Airport",
+                    oldtown: "4-min drive to Old Town"
+                },
+                why: "3-4 MINUTE WALK TO THE STRIP! Literally beside all the nightlife. But it's on a quiet road so you can sleep when you need to. Large garden is rare for central Albufeira. Oura Beach is 6 minutes away. Ultimate location for partying!",
+                images: [
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920",
+                    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920",
+                    "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1920",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920"
+                ],
+                url: "https://www.vrbo.com/1009368ha"
+            },
+            {
+                id: 8,
+                name: "Villa Paradiso",
+                location: "Santa Eulália, Albufeira",
+                area: "Albufeira",
+                bedrooms: 8,
+                bathrooms: 9,
+                guests: 16,
+                pricePerNight: "£750-£1,029",
+                priceTotal: "~£3,750-£5,145 for 5 nights",
+                rating: 4.9,
+                description: "Outstanding beachfront villa with stunning sea views and private beach access. The villa features a 6-bedroom main house plus a 2-bedroom annex, offering exceptional space and flexibility for large groups. Beautiful lagoon-style pool with rock pools and waterfall feature.",
+                amenities: [
+                    "Heated lagoon pool (11.7m x 5m)",
+                    "Hot tub & rock pools",
+                    "Private beach access",
+                    "Gym facility",
+                    "BBQ terrace",
+                    "Full air conditioning",
+                    "Maid service 5x weekly",
+                    "Parking for 4 vehicles",
+                    "WiFi throughout"
+                ],
+                distances: {
+                    beach: "2-min walk to Praia da Oura",
+                    nightlife: "Walking distance to bars/restaurants",
+                    airport: "37 mins to Faro Airport",
+                    supermarket: "7-min walk to Intermarché"
+                },
+                why: "PRIVATE BEACH ACCESS is a game-changer! The lagoon pool with hot tub and waterfalls looks incredible. 2-minute walk to Santa Eulália beach. The annex gives flexibility for the group to split up if needed. Gym and maid service included.",
+                images: [
+                    "https://mda.sandyblue.com//media/images/accommodation/574/xxl/1920x1080/_O5A9317.jpg",
+                    "https://mda.sandyblue.com//media/images/accommodation/574/xxl/1920x1080/_O5A9337_1.jpg",
+                    "https://mda.sandyblue.com//media/images/accommodation/574/xxl/1920x1080/_O5A9325.jpg",
+                    "https://mda.sandyblue.com//media/images/accommodation/574/xxl/1920x1080/_O5A9267.jpg",
+                    "https://mda.sandyblue.com//media/images/accommodation/574/xxl/1920x1080/_O5A9304.jpg"
+                ],
+                url: "https://www.sandyblue.com/albufeira/villa-paradiso.html"
+            },
+            {
+                id: 9,
+                name: "Vivenda Suecia",
+                location: "São Gonçalo de Lagos",
+                area: "Lagos",
+                bedrooms: 8,
+                bathrooms: 8,
+                guests: 20,
+                pricePerNight: "£857-£1,086",
+                priceTotal: "~£4,285-£5,430 for 5 nights",
+                rating: 10,
+                description: "Perfect 10 rating! Luxury 8-bedroom villa in desirable Porto do Mos area. Features 13x5m heated pool surrounded by tropical garden with fruit trees (peaches, lemons, grapes). Games room with full-size pool table and darts. Extensive outdoor kitchen and BBQ area. Just 750m walk to Porto do Mos beach.",
+                amenities: [
+                    "13x5m heated pool",
+                    "Tropical garden with fruit trees",
+                    "Fruit orchard",
+                    "Games room (pool table & darts)",
+                    "Extensive outdoor kitchen",
+                    "BBQ area",
+                    "Table tennis",
+                    "All bedrooms A/C",
+                    "WiFi"
+                ],
+                distances: {
+                    beach: "750m (10-min walk) to Porto do Mos beach",
+                    nightlife: "Lagos center nearby",
+                    airport: "1 hour to Faro Airport",
+                    supermarket: "Close to local shops"
+                },
+                why: "PERFECT 10 RATING! The games room is sick - full-size pool table and darts. Outdoor kitchen is amazing for group meals. Heated pool is clutch for March. The fruit orchard is a cool touch. Lagos has great nightlife and beautiful beaches.",
+                images: [
+                    "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1920",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1920",
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920",
+                    "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=1920"
+                ],
+                url: "https://www.vrbo.com/6088711ha"
+            }
+        ];
+
+        // Initialize votes from localStorage
+        let allVotes = JSON.parse(localStorage.getItem('hannahVillaVotesV3')) || {};
+
+        function getUserVote(villaId) {
+            if (!currentUser) return null;
+            return allVotes[villaId]?.[currentUser.id] || null;
+        }
+
+        function setUserVote(villaId, value) {
+            if (!currentUser) return;
+
+            if (!allVotes[villaId]) {
+                allVotes[villaId] = {};
+            }
+
+            if (allVotes[villaId][currentUser.id] === value) {
+                delete allVotes[villaId][currentUser.id];
+            } else {
+                allVotes[villaId][currentUser.id] = value;
+            }
+
+            saveVotes();
+            renderVillas();
+            renderLeaderboard();
+        }
+
+        function saveVotes() {
+            localStorage.setItem('hannahVillaVotesV3', JSON.stringify(allVotes));
+        }
+
+        function getVillaVoteCount(villaId) {
+            const votes = allVotes[villaId] || {};
+            let up = 0, down = 0;
+            Object.values(votes).forEach(v => {
+                if (v === 1) up++;
+                else if (v === -1) down++;
+            });
+            return { up, down, total: up - down };
+        }
+
+        function getVillaVoters(villaId, voteType) {
+            const votes = allVotes[villaId] || {};
+            const voterIds = Object.entries(votes)
+                .filter(([userId, vote]) => vote === voteType)
+                .map(([userId]) => userId);
+            return voterIds.map(id => USERS.find(u => u.id === id)).filter(Boolean);
+        }
+
+        function getUserInitials(name) {
+            return name.split(' ').map(n => n[0]).join('').toUpperCase();
+        }
+
+        // Initialize user greeting
+        if (currentUser) {
+            document.getElementById('user-avatar').textContent = getUserInitials(currentUser.name);
+            document.getElementById('user-avatar').style.background = currentUser.color;
+            document.getElementById('user-name').textContent = currentUser.name;
+        } else {
+            document.getElementById('user-badge').style.display = 'none';
+        }
+
+        function renderLeaderboard() {
+            const sortedVillas = [...villas].map(villa => ({
+                ...villa,
+                votes: getVillaVoteCount(villa.id)
+            })).sort((a, b) => b.votes.total - a.votes.total).slice(0, 10);
+
+            const leaderboardHTML = sortedVillas.map((villa, index) => `
+                <div class="leaderboard-item">
+                    <div class="leaderboard-rank">${index + 1}</div>
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">${villa.name}</div>
+                        <div class="leaderboard-location">${villa.location}</div>
+                    </div>
+                    <div class="leaderboard-votes">${villa.votes.total >= 0 ? '+' : ''}${villa.votes.total}</div>
+                </div>
+            `).join('');
+
+            document.getElementById('leaderboard-grid').innerHTML = leaderboardHTML;
+        }
+
+        function renderVillas() {
+            const villasSection = document.getElementById('villas-section');
+
+            const villasHTML = villas.map(villa => {
+                const votes = getVillaVoteCount(villa.id);
+                const userVote = getUserVote(villa.id);
+                const upVoters = getVillaVoters(villa.id, 1);
+                const downVoters = getVillaVoters(villa.id, -1);
+
+                const galleryHTML = villa.images.slice(1, 5).map((img, i) => `
+                    <div class="gallery-image ${i === 0 ? 'gallery-image-large' : ''}">
+                        <img src="${img}" alt="${villa.name}" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920'">
+                    </div>
+                `).join('');
+
+                return `
+                    <article class="villa-article">
+                        <div class="villa-hero">
+                            <img src="${villa.images[0]}" alt="${villa.name}" class="villa-hero-image" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920'">
+                            ${villa.rating ? `<div class="villa-rating-badge">⭐ ${villa.rating}</div>` : ''}
+                            <div class="villa-hero-overlay">
+                                <div class="villa-badge">${villa.area}</div>
+                                <h2 class="villa-hero-title">${villa.name}</h2>
+                                <p class="villa-hero-location">📍 ${villa.location}</p>
+                                <div class="villa-hero-stats">
+                                    <div class="villa-stat">
+                                        <div class="villa-stat-value">${villa.guests}</div>
+                                        <div class="villa-stat-label">Guests</div>
+                                    </div>
+                                    <div class="villa-stat">
+                                        <div class="villa-stat-value">${villa.bedrooms}</div>
+                                        <div class="villa-stat-label">Bedrooms</div>
+                                    </div>
+                                    <div class="villa-stat">
+                                        <div class="villa-stat-value">${villa.bathrooms}</div>
+                                        <div class="villa-stat-label">Bathrooms</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="villa-gallery-grid">
+                            ${galleryHTML}
+                        </div>
+
+                        <div class="villa-content">
+                            <div class="villa-content-grid">
+                                <div class="villa-main-content">
+                                    <h3>About This Villa</h3>
+                                    <p class="villa-description">${villa.description}</p>
+
+                                    <div class="villa-why-box">
+                                        <h4>Why This One?</h4>
+                                        <p>${villa.why}</p>
+                                    </div>
+                                </div>
+
+                                <div class="villa-sidebar">
+                                    <div class="price-card">
+                                        <div class="price-label">Price Per Night</div>
+                                        <div class="price-value">${villa.pricePerNight}</div>
+                                        <div class="price-total">${villa.priceTotal}</div>
+                                    </div>
+
+                                    <div class="amenities-card">
+                                        <h4>Key Amenities</h4>
+                                        <ul class="amenities-list">
+                                            ${villa.amenities.slice(0, 9).map(amenity => `<li>${amenity}</li>`).join('')}
+                                        </ul>
+                                    </div>
+
+                                    <div class="location-card">
+                                        <h4>Location & Distances</h4>
+                                        <ul class="location-list">
+                                            <li><span class="location-icon">🏖️</span> ${villa.distances.beach}</li>
+                                            <li><span class="location-icon">🎉</span> ${villa.distances.nightlife}</li>
+                                            <li><span class="location-icon">✈️</span> ${villa.distances.airport}</li>
+                                            ${villa.distances.supermarket ? `<li><span class="location-icon">🛒</span> ${villa.distances.supermarket}</li>` : ''}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="villa-voting-section">
+                                <div class="voting-header">
+                                    <h3>Cast Your Vote</h3>
+                                    <div class="vote-score">${votes.total >= 0 ? '+' : ''}${votes.total}</div>
+                                </div>
+
+                                ${currentUser ? `
+                                    <div class="vote-buttons">
+                                        <button class="vote-btn vote-btn-down" onclick="vote(${villa.id}, -1)">
+                                            ${userVote === -1 ? '✓ Remove' : '👎 Pass'}
+                                        </button>
+                                        <button class="vote-btn vote-btn-up" onclick="vote(${villa.id}, 1)">
+                                            ${userVote === 1 ? '✓ Remove' : '👍 Love It'}
+                                        </button>
+                                    </div>
+                                ` : '<p style="text-align: center; color: var(--navy); font-weight: 600; margin-bottom: 32px;">Open your personalized link to vote!</p>'}
+
+                                <div class="voters-section">
+                                    <div class="voters-group up">
+                                        <h4>👍 ${upVoters.length} Vote${upVoters.length !== 1 ? 's' : ''} For</h4>
+                                        <div class="voters-chips">
+                                            ${upVoters.length > 0 ? upVoters.map(user => `
+                                                <div class="voter-chip up">${user.name}</div>
+                                            `).join('') : '<p style="color: #999; font-size: 0.9rem;">No votes yet</p>'}
+                                        </div>
+                                    </div>
+                                    <div class="voters-group down">
+                                        <h4>👎 ${downVoters.length} Vote${downVoters.length !== 1 ? 's' : ''} Against</h4>
+                                        <div class="voters-chips">
+                                            ${downVoters.length > 0 ? downVoters.map(user => `
+                                                <div class="voter-chip down">${user.name}</div>
+                                            `).join('') : '<p style="color: #999; font-size: 0.9rem;">No votes yet</p>'}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="${villa.url}" target="_blank" class="book-button">View Full Listing & Book →</a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            villasSection.innerHTML = villasHTML;
+        }
+
+        function vote(villaId, value) {
+            if (!currentUser) {
+                alert('Please open your personalized link to vote!');
+                return;
+            }
+            setUserVote(villaId, value);
+        }
+
+        // Initial render
+        renderVillas();
+        renderLeaderboard();
+
+        // Make function global
+        window.vote = vote;
+    </script>
+</body>
+</html>
